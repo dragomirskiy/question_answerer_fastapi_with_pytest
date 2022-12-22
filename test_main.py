@@ -1,7 +1,6 @@
 # Подключаем TestClient - клиент для тестирования API из FastAPI.
 from fastapi.testclient import TestClient
 from main import app
-import httpx
 
 client = TestClient(app)
 
