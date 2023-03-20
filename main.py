@@ -27,14 +27,6 @@ def root():
 # при использовании метода HTTP POST при получении запроса к каталогу /predict.
 @app.post('/predict')
 def predict(item: Item):
-    """
-    МОДЕЛЬ ДЛЯ ОТВЕТА НА ВОПРОС ПО ЗАДАННОМУ ТЕКСТУ.
-    В PostMan > Body > raw вводим (тип должен быть указан JSON):
-        {
-            "context_question" : ["My name is Maxim. I am 31 years old.", "What is my name?"]
-        }
-    """
-
     result = question_answerer(context=item.context_question[0], question=item.context_question[1])
 
     # Вычленяем из результата значение оценки.
