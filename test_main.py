@@ -2,7 +2,7 @@
 from fastapi.testclient import TestClient
 from main import app
 
-# Создается клиент для тестирования, которому при создании передается объект API app, 
+# Создается клиент для тестирования, которому при создании передается объект API app,
 # тестирование которого необходимо выполнить.
 client = TestClient(app)
 
